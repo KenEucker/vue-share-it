@@ -1,8 +1,7 @@
 <template>
   <div class="vue-share-it-wrapper">
-    <template v-for="(config, index) in finalConfig">
+    <template v-for="(config, index) in finalConfig" :key="`share-target-${index}`">
       <a
-        :key="`share-target-${index}`"
         href="javascript:void(0)"
         @click="openPopUp(config)"
         :style="{ 
